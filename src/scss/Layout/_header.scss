@@ -1,0 +1,320 @@
+// 各ページを構成する、ヘッダー、メインコンテンツエリア、サイドバー、フッターなどのスタイルをエリアごとに管理
+// ※ページ全体からみたレイアウトに対するスタイルを定義する
+// ※外枠のみ定義。子要素はなるべく入れない
+// ※ヘッダーやフッターの中身はp-で定義する
+
+.header {
+  position: fixed;
+  background: #FFF;
+  overflow: hidden;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  
+  &-left {
+    float: left;
+  }
+  
+  &-logo {
+    &-area {
+      @include mq(pc) {
+        padding: remPC(23.22) 0 0 remPC(22.75);
+      }
+      
+      @include mq(sp) {
+        padding: vw(27) 0 0 vw(20);
+      }
+    }
+    &-img {
+      @include mq(pc) {
+        width: remPC(154.48);
+      }
+      
+      @include mq(sp) {
+        width: vw(245.57);
+      }
+    }
+  }
+  
+  &-right {
+    float: right;
+    
+    @include mq(sp) {
+      width: 50%;
+    }
+  }
+  
+  &-contact {
+    &-area {
+      background: #EF8300;
+      
+      @include mq(pc) {
+        width: remPC(256);
+        height: remPC(82);
+      }
+      
+      @include mq(sp) {
+        width: vw(116);
+        height: vw(116);
+        float: right;
+      }
+    }
+    
+    &-content {
+      overflow: hidden;
+    }
+    
+    &-icon {
+      @include mq(pc) {
+        float: left;
+        width: remPC(56.13);
+        text-align: right;
+        padding-top: remPC(31.54);
+      }
+      
+      @include mq(sp) {
+        width: 100%;
+        text-align: center;
+        padding-top: vw(45.19);
+      }
+    }
+    
+    &-img {
+      @include mq(pc) {
+        width: remPC(26.13);
+      }
+      
+      @include mq(sp) {
+        width: vw(36.9);
+      }
+    }
+    
+    &-text {
+      @include mq(pc) {
+        float: right;
+        width: remPC(186);
+        padding-top: remPC(16.5);
+        font-size: remPC(16);
+        font-weight: 700;
+        line-height: remPC(22);
+        color: #FFF;
+      }
+    }
+  }
+  
+  &-controller-area {
+    @include mq(sp) {
+      background: #053D7E;
+      float: right;
+      width: vw(116);
+      height: vw(116);
+      position: relative;
+      cursor: pointer;
+    }
+    
+    &:before {
+      @include mq(sp) {
+        content: "";
+        position: absolute;
+        width: vw(56.8);
+        height: vw(37.86);
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    
+    &:after {
+      @include mq(sp) {
+        content: "";
+        position: absolute;
+        width: vw(56.8);
+        height: 0;
+        border-top: 1px solid #FFF;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    
+    &.active {
+      &:before {
+        @include mq(sp) {
+          height: 0;
+          border-bottom: 0;
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+      }
+      
+      &:after {
+        @include mq(sp) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+  
+  &-menu {
+    &-shadow {
+      position: fixed;
+      width: 100%;
+      z-index: -2;
+      display: none;
+      
+      @include mq(sp) {
+        top: remPC(30);
+        height: 100%;
+      }
+    }
+    
+    &-area {
+      position: fixed;
+      background: #FFF;
+      z-index: -1;
+      
+      &:before {
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          width: vw(94);
+          border-bottom: 1.2px solid #295C9B;
+          bottom: -2.5px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      
+      @include mq(pc) {
+        left: remPC(212);
+        right: remPC(280);
+        top: 0;
+        height: remPC(82);
+      }
+      
+      @include mq(sp) {
+        width: 100%;
+        top: vw(116);
+        padding: vw(93) vw(110) vw(92);
+        border-top: 1px solid #053D7E;
+        border-bottom: 1px solid #053D7E;
+        display: none;
+      }
+    }
+    
+    &-list {
+      width: 100%;
+      
+      @include mq(pc) {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    
+    &-item {
+      font-weight: 500;
+      color: #003D7E;
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-left: 0;
+        }
+        
+        @include mq(sp) {
+          margin-top: 0;
+        }
+      }
+      
+      &:before {
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          top: vw(8);
+          right: 0;
+          border-top: vw(11) solid transparent;
+          border-bottom: vw(11) solid transparent;
+          border-left: vw(11) solid #003D7E;
+        }
+      }
+      
+      &:after {
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          top: vw(8);
+          right: vw(3.5);
+          border-top: vw(11) solid transparent;
+          border-bottom: vw(11) solid transparent;
+          border-left: vw(11) solid #FFF;
+        }
+      }
+      
+      @include mq(pc) {
+        float: left;
+        margin-left: remPC(26);
+        font-size: remPC(13.5);
+        line-height: remPC(20);
+      }
+      
+      @include mq(sp) {
+        width: 100%;
+        margin-top: vw(73);
+        font-size: vw(26);
+        height: vw(38);
+        line-height: vw(38);
+        position: relative;
+      }
+    }
+  }
+}
+
+.btn-page-top {
+  position: fixed;
+  z-index: 999;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  font-family: $montserrat;
+  transform: rotate(90deg);
+  cursor: pointer;
+
+  @include mq(pc) {
+    bottom: remPC(117.14);
+    left: 50%;
+    font-size: remPC(16);
+    line-height: remPC(19);
+    transform: translateX(remPC(543.6)) rotate(90deg);
+  }
+
+  @include mq(sp) {
+    bottom: vw(250);
+    right: vw(-55);
+    font-size: vw(30);
+    line-height: vw(37);
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @include mq(pc) {
+      left: remPC(-38.39);
+      bottom: remPC(7.05);
+      width: remPC(26.15);
+      height: remPC(8.45);
+      background-image: url("../img/pc/common/btn-page-top.png");
+    }
+
+    @include mq(sp) {
+      left: vw(-55.61);
+      bottom: vw(11.05);
+      width: vw(49.37);
+      height: vw(15.95);
+      background-image: url("../img/sp/common/btn-page-top.png");
+    }
+  }
+}

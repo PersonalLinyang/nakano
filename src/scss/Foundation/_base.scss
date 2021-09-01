@@ -1,0 +1,100 @@
+// body * {
+//   background: rgba(0,0,0,.2)!important;
+// }
+
+// section > * * * * *  {
+//   display: none!important;
+// }
+
+// サイトを構成する上で、デザインの基本の下地、土台となるスタイルを定義
+// ※基本的にタグ自体にスタイルを定義すること。
+// ※クラスなしの状態でも最低限の表示になることを心がける
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+  @include mq(tb) {
+    font-size: (16px*.8);
+  }
+  @include mq(sp) {
+    font-size: 16px;
+  }
+}
+
+
+body {
+    font-family: $font_jp;
+    font-size: remPC(13);
+	  overflow-x: hidden;
+    font-feature-settings: 'palt';
+    background: #FFF;
+    color: #333333;
+    @include mq(sp) {
+      font-size: vw(13);
+    }
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    &[src$=".svg"] {
+        fill: currentColor;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.icon {
+  display: inline-block;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+table {
+  width: 100%;
+}
+th {
+  background: #EBF1F5;
+  text-align: center;
+}
+th,td {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  padding: .5em;
+}
+
+ruby> rt {
+	font-size: remPC(10);
+}
+
+.pc-only {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.sp-only {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.full-link {
+  display: block;
+  height: 100%;
+}

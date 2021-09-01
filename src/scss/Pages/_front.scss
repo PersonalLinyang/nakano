@@ -1,0 +1,2102 @@
+/* front */
+
+.front {
+  &-title {
+    &-en {
+      color: #F2F2F3;
+      font-weight: 300;
+      font-family: $montserrat;
+      text-align: center;
+      
+      @include mq(pc) {
+        font-size: remPC(90);
+        line-height: remPC(110);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(96);
+        line-height: vw(117);
+      }
+      
+      &.dark {
+        color: #E9E9E9;
+      }
+    }
+    
+    &-jp {
+      color: #003D7E;
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+      
+      @include mq(pc) {
+        font-size: remPC(37);
+        line-height: remPC(55);
+        margin-top: remPC(-4.49);
+        padding-bottom: remPC(23.49);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(50);
+        line-height: vw(74);
+        margin-top: vw(7.51);
+        padding-bottom: vw(29.49);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        border-top: 1.2px solid #295C9B;
+        
+        @include mq(pc) {
+          width: remPC(100);
+        }
+        
+        @include mq(sp) {
+          width: vw(100);
+        }
+      }
+      
+      .en {
+        font-family: $montserrat;
+      }
+      
+      .light {
+        font-weight: 300;
+      }
+    }
+  }
+  
+  &-desc {
+    text-align: center;
+    
+    @include mq(pc) {
+      font-size: remPC(16);
+      line-height: remPC(24);
+      margin-top: remPC(24.51);
+    }
+    
+    @include mq(sp) {
+      font-size: vw(26);
+      line-height: vw(47);
+      margin-top: vw(34.5);
+    }
+  }
+    
+  &-button {
+    background: #003D7E;
+    border-radius: 60px;
+    color: #FFF;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    
+    @include mq(pc) {
+      width: remPC(294);
+      height: remPC(60);
+      font-size: remPC(20);
+      line-height: remPC(60);
+    }
+    
+    @include mq(sp) {
+      width: vw(440);
+      height: vw(80);
+      font-size: vw(28);
+      line-height: vw(80);
+    }
+    
+    &:before {
+      content: "";
+      position: absolute;
+      background: #FFF;
+      border-radius: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      
+      @include mq(pc) {
+        width: remPC(34);
+        height: remPC(34);
+        right: remPC(20);
+      }
+      
+      @include mq(sp) {
+        width: vw(49.51);
+        height: vw(49.51);
+        right: vw(23.3);
+      }
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      
+      @include mq(pc) {
+        width: remPC(8.41);
+        height: remPC(8.41);
+        border-top: remPC(3) solid #003D7E;
+        border-right: remPC(3) solid #003D7E;
+        right: remPC(33.55);
+      }
+      
+      @include mq(sp) {
+        width: vw(12.25);
+        height: vw(12.25);
+        border-top: vw(3) solid #003D7E;
+        border-right: vw(3) solid #003D7E;
+        right: vw(43.03);
+      }
+    }
+  }
+  
+  &-mainvisual {
+    overflow: hidden;
+    position: relative;
+    
+    @include mq(pc) {
+      padding-bottom: remPC(146);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(113.5);
+    }
+    
+    &-bg {
+      position: absolute;
+      
+      @include mq(pc) {
+        width: remPC(867.46);
+        left: 50%;
+        top: remPC(9.84);
+        margin-left: remPC(8.46);
+      }
+      
+      @include mq(sp) {
+        width: vw(511.83);
+        left: 50%;
+        top: remPC(16.59);
+        margin-left: vw(20);
+      }
+    }
+    
+    &-img {
+      width: 100%;
+    }
+    
+    &-content {
+      margin: 0 auto;
+      
+      @include mq(pc) {
+        max-width: remPC(1150);
+      }
+      
+      @include mq(sp) {
+        padding: vw(17);
+      }
+    }
+    
+    &-nakano {
+      color: #707070;
+      font-weight: 700;
+      font-family: $font_jp_if;
+      
+      @include mq(pc) {
+        margin-top: remPC(104.78);
+        font-size: remPC(56);
+        line-height: remPC(80);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(91.81);
+        font-size: vw(39);
+        line-height: vw(56);
+      }
+      
+      .small {
+        @include mq(pc) {
+          margin-left: remPC(9.82);
+          font-size: remPC(43);
+          line-height: remPC(65.6);
+        }
+        
+        @include mq(sp) {
+          margin-left: vw(19.6);
+          font-size: vw(29);
+          line-height: vw(41);
+        }
+      }
+    }
+    
+    &-english {
+      overflow: hidden;
+      position: relative;
+      font-family: $montserrat;
+      font-weight: 700;
+      
+      @include mq(pc) {
+        margin-top: remPC(7.72);
+        font-size: remPC(99);
+        line-height: remPC(121);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(10.88);
+        font-size: vw(72);
+        line-height: vw(88);
+      }
+    }
+    
+    &-odm {
+      color: #003D7E;
+      float: left;
+    }
+    
+    &-line {
+      float: left;
+      
+      @include mq(pc) {
+        margin-left: remPC(-4);
+        margin-top: remPC(7);
+        width: remPC(59);
+      }
+      
+      @include mq(sp) {
+        margin-left: vw(1.26);
+        margin-top: vw(4.26);
+        width: vw(44.31);
+      }
+      
+      &-img {
+        width: 100%;
+      }
+    }
+    
+    &-oem {
+      color: #27A7DD;
+      float: left;
+      
+      @include mq(pc) {
+        margin-left: remPC(-12.5);
+      }
+      
+      @include mq(sp) {
+        margin-left: vw(-9.39);
+      }
+    }
+    
+    &-text {
+      color: #003D7E;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        margin-top: remPC(18.5);
+        font-size: remPC(20);
+        line-height: remPC(34.5);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(22.31);
+        margin-left: vw(3);
+        font-size: vw(24);
+        line-height: vw(38.6);
+      }
+    }
+    
+    &-button {
+      background: #003D7E;
+      border-radius: 60px;
+      color: #FFF;
+      font-weight: 600;
+      position: relative;
+      text-align: left;
+      margin-left: 0;
+      
+      @include mq(pc) {
+        margin-top: remPC(36);
+        font-size: remPC(17);
+        line-height: remPC(84);
+        width: remPC(437);
+        height: remPC(84);
+        padding-left: remPC(51);
+      }
+      
+      @include mq(sp) {
+        margin: vw(145) vw(3) 0;
+        font-size: vw(28);
+        line-height: vw(106);
+        width: auto;
+        height: vw(106);
+        padding-left: vw(71);
+      }
+      
+      &:before {
+        @include mq(pc) {
+          left: remPC(373);
+        }
+        
+        @include mq(sp) {
+          width: vw(55);
+          height: vw(55);
+          left: vw(616);
+        }
+      }
+      
+      &:after {
+        @include mq(pc) {
+          left: remPC(387.5);
+        }
+        
+        @include mq(sp) {
+          width: vw(13.65);
+          height: vw(13.65);
+          left: vw(635.17);
+        }
+      }
+    }
+  }
+  
+  &-news {
+    &-area {
+      @include mq(pc) {
+        margin-top: remPC(123);
+        overflow: hidden;
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(88);
+        margin-left: vw(6);
+        width: vw(683);
+      }
+    }
+    
+    &-title {
+      font-family: $montserrat;
+      font-weight: 700;
+      letter-spacing: 0.08rem;
+      color: #003D7E;
+      
+      @include mq(pc) {
+        float: left;
+        width: remPC(74);
+        font-size: remPC(17);
+      }
+      
+      @include mq(sp) {
+        margin: vw(88) auto 0;
+        font-size: vw(27);
+        border-bottom: 1.2px solid #295C9B;
+        padding-bottom: vw(24.5);
+        width: vw(94);
+      }
+    }
+    
+    &-content {
+      @include mq(pc) {
+        float: left;
+        font-size: remPC(14);
+        border-left: 1px solid #003D7E;
+        padding-left: remPC(15);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(12.5);
+        font-size: vw(23);
+      }
+    }
+    
+    &-item {
+      @include mq(pc) {
+        margin-top: remPC(10);
+        font-size: remPC(14);
+        overflow: hidden;
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(30);
+        font-size: vw(23);
+      }
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-top: 0;
+        }
+      }
+    }
+    
+    &-info {
+      overflow: hidden;
+      
+      @include mq(pc) {
+        float: left;
+      }
+    }
+    
+    &-date {
+      float: left;
+      font-family: $yugothic;
+      font-weight: 600;
+      color: #003D7E;
+      letter-spacing: 0.1rem;
+    }
+    
+    &-news {
+      float: left;
+      font-family: $montserrat;
+      font-weight: 500;
+      color: #EF8300;
+      
+      @include mq(pc) {
+        margin-left: remPC(15);
+      }
+      
+      @include mq(sp) {
+        margin-left: vw(11);
+      }
+    }
+    
+    &-topic {
+      font-weight: 500;
+      color: #003D7E;
+      letter-spacing: 0.03rem;
+      
+      @include mq(pc) {
+        float: left;
+        margin-left: remPC(13);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(12);
+      }
+    }
+  }
+  
+  &-features {
+    @include mq(pc) {
+      padding-bottom: remPC(141);
+      background-repeat: no-repeat;
+      background-image: url("../img/pc/front/front-features-bg.png");
+      background-size: remPC(1366);
+      background-position: top remPC(182.5) right remPC(-664);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(157);
+    }
+    
+    &-content {
+      margin: 0 auto;
+      
+      @include mq(pc) {
+        width: 100%;
+        max-width: remPC(1000);
+        padding: remPC(11.49) 0 remPC(69.5);
+      }
+      
+      @include mq(sp) {
+        width: vw(710);
+        padding: vw(19.56) 0 vw(54.44);
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        height: remPC(200);
+        margin-top: remPC(87.5);
+      }
+    }
+    
+    &-item {
+      position: relative;
+      background: #E9E9E9;
+      
+      @include mq(pc) {
+        float: left;
+        height: remPC(200);
+        margin-left: 100px;
+        width: calc((100% - 100px) / 2);
+      }
+      
+      @include mq(sp) {
+        height: vw(315.56);
+        margin-top: vw(104.44);
+      }
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-left: 0;
+        }
+      }
+    }
+    
+    &-point {
+      position: absolute;
+      border-bottom: 3px solid #295C9B;
+      font-family: $montserrat;
+      font-weight: 600;
+      left: 0;
+      color: #003D7E;
+      transform: scale(0.5) translate(-50%, -50%);
+      
+      @include mq(pc) {
+        top: remPC(-27);
+        padding-bottom: remPC(2);
+        font-size: remPC(22);
+        line-height: remPC(28);
+      }
+      
+      @include mq(sp) {
+        top: vw(-42);
+        padding-bottom: vw(5);
+        font-size: vw(34);
+        line-height: vw(40);
+      }
+    }
+    
+    &-number {
+      position: absolute;
+      font-family: $montserrat;
+      font-weight: 600;
+      color: #003D7E;
+      letter-spacing: 0.1rem;
+      
+      @include mq(pc) {
+        top: remPC(-40);
+        left: remPC(37);
+        font-size: remPC(55);
+        line-height: remPC(67);
+      }
+      
+      @include mq(sp) {
+        top: vw(-63);
+        left: vw(58);
+        font-size: vw(87);
+        line-height: vw(106);
+      }
+    }
+    
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.03rem;
+      
+      @include mq(pc) {
+        font-size: remPC(22);
+        line-height: remPC(39);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(38);
+        line-height: vw(60);
+      }
+    }
+  }
+  
+  &-about {
+    background: #F2F2F3;
+    
+    @include mq(pc) {
+      padding: remPC(77) 0 remPC(105);
+    }
+    
+    @include mq(sp) {
+      padding: vw(60) 0 vw(118);
+    }
+    
+    &-content {
+      @include mq(pc) {
+        padding: remPC(53.49) 0 remPC(57.48);
+      }
+      
+      @include mq(sp) {
+        padding: vw(60.49) 0 vw(48);
+      }
+    }
+    
+    &-bg {
+      background: #FFF;
+      overflow: hidden;
+      position: relative;
+      
+      @include mq(pc) {
+        height: remPC(280);
+      }
+      
+      @include mq(sp) {
+        height: vw(280);
+      }
+    }
+    
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      @include mq(pc) {
+        max-width: remPC(1366);
+        width: remPC(1366);
+      }
+      
+      @include mq(sp) {
+        max-width: remPC(1366);
+        width: vw(1366);
+      }
+    }
+    
+    &-text {
+      font-weight: 600;
+      letter-spacing: 0.03rem;
+      
+      @include mq(pc) {
+        height: remPC(59.69);
+        position: relative;
+        margin-top: remPC(72.83);
+        font-size: remPC(25);
+        line-height: remPC(37);
+      }
+      
+      @include mq(sp) {
+        padding: vw(60.49) 0 vw(48);
+        margin-top: vw(52);
+        font-size: vw(36);
+        line-height: vw(54);
+        text-align: center;
+      }
+    }
+    
+    &-left {
+      @include mq(pc) {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(remPC(-55), -50%);
+      }
+    }
+    
+    &-center {
+      background:linear-gradient(45deg,transparent 49.5%, #707070 49.5%, #707070 50.5%, transparent 50.5%);
+      
+      @include mq(pc) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: remPC(59.69);
+        height: remPC(59.69);
+      }
+      
+      @include mq(sp) {
+        position: relative;
+        margin: vw(28) auto 0;
+        width: vw(59.69);
+        height: vw(59.69);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:linear-gradient(-45deg,transparent 49.5%, #707070 49.5%, #707070 50.5%, transparent 50.5%);
+        
+        @include mq(pc) {
+          width: remPC(59.69);
+          height: remPC(59.69);
+        }
+        
+        @include mq(sp) {
+          width: vw(59.69);
+          height: vw(59.69);
+        }
+      }
+    }
+    
+    &-right {
+      @include mq(pc) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(remPC(55), -50%);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(28.31);
+      }
+    }
+  }
+  
+  &-cases {
+    @include mq(pc) {
+      padding: remPC(83) 0 remPC(79.37);
+    }
+    
+    @include mq(sp) {
+      padding: vw(130) 0 vw(180);
+    }
+    
+    &-content {
+      @include mq(pc) {
+        padding: remPC(41) 0 remPC(52);
+      }
+      
+      @include mq(sp) {
+        padding: vw(63) 0 vw(54);
+      }
+    }
+    
+    &-bg {
+      overflow: hidden;
+      position: relative;
+      
+      @include mq(pc) {
+        height: remPC(280);
+      }
+      
+      @include mq(sp) {
+        height: vw(280);
+      }
+    }
+    
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      @include mq(pc) {
+        max-width: remPC(1960);
+        width: remPC(1960);
+      }
+      
+      @include mq(sp) {
+        max-width: vw(1960);
+        width: vw(1960);
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        overflow: hidden;
+        margin: remPC(41.79) auto 0;
+        max-width: remPC(1160);
+      }
+      
+      @include mq(sp) {
+        margin: 0 vw(20.72);
+      }
+    }
+    
+    &-item {
+      @include mq(pc) {
+        width: calc((100% - 16.5px) / 2);
+        max-width: remPC(493);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(80);
+      }
+      
+      &.left {
+        @include mq(pc) {
+          float: left;
+        }
+      }
+      
+      &.right {
+        @include mq(pc) {
+          float: right;
+        }
+      }
+    }
+    
+    &-title {
+      &-jp {
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        
+        @include mq(pc) {
+          font-size: remPC(25);
+          line-height: remPC(37);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(35);
+          line-height: vw(52);
+        }
+      }
+      
+      &-en {
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        color: #295C9B;
+        
+        @include mq(pc) {
+          font-size: remPC(13);
+          line-height: remPC(16);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(18);
+          line-height: vw(22);
+        }
+      }
+    }
+    
+    &-product {
+      overflow: hidden;
+      
+      @include mq(pc) {
+        margin-top: remPC(18.21);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(27.26);
+      }
+      
+      &-item {
+        @include mq(pc) {
+          margin-left: 16.5px;
+          width: calc((100% - 16.5px) / 2);
+          float: left;
+        }
+        
+        @include mq(sp) {
+          width: vw(342.76);
+          max-width: 49.9%;
+        }
+        
+        &:first-child {
+          margin-left: 0;
+        }
+        
+        &.left {
+          @include mq(sp) {
+            float: left;
+          }
+        }
+        
+        &.right {
+          @include mq(sp) {
+            float: right;
+          }
+        }
+      }
+      
+      &-bg {
+        background: #F2F2F3;
+        position: relative;
+        
+        @include mq(pc) {
+          height: remPC(260);
+        }
+        
+        @include mq(sp) {
+          height: vw(374.44);
+        }
+      }
+      
+      &-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        max-height: 80%;
+      }
+      
+      &-title {
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 0.1rem;
+        
+        @include mq(pc) {
+          margin-top: remPC(9);
+          padding-bottom: remPC(11);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(13.02);
+          padding-bottom: vw(15.75);
+        }
+        
+        &:before {
+          content: "";
+          position: absolute;
+          border-top: 1px solid #295C9B;
+          left: 0;
+          bottom: 0;
+          
+          @include mq(pc) {
+            width: remPC(38);
+          }
+          
+          @include mq(sp) {
+            width: vw(54.73);
+          }
+        }
+        
+        &-company {
+          float: left;
+          font-weight: 500;
+          
+          @include mq(pc) {
+            font-size: remPC(20);
+            line-height: remPC(29);
+            margin-top: remPC(5);
+            margin-right: remPC(33.5);
+          }
+          
+          @include mq(sp) {
+            font-size: vw(28);
+            line-height: vw(41);
+            margin-top: remPC(7.15);
+            margin-right: remPC(49.28);
+          }
+        }
+        
+        &-number {
+          float: left;
+          font-weight: 500;
+          white-space: nowrap;
+          
+          @include mq(pc) {
+            font-size: remPC(18);
+            line-height: remPC(34);
+          }
+          
+          @include mq(sp) {
+            font-size: vw(26);
+            line-height: vw(49);
+          }
+          
+          .number {
+            color: #295C9B;
+            
+            @include mq(pc) {
+              font-size: remPC(23);
+            }
+            
+            @include mq(sp) {
+              font-size: vw(33);
+            }
+          }
+        }
+      }
+      
+      &-info {
+        overflow: hidden;
+        letter-spacing: 0.05rem;
+        display: flex;
+        
+        @include mq(pc) {
+          font-size: remPC(14);
+          line-height: remPC(20);
+          margin-top: remPC(7);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(26);
+          line-height: vw(38);
+          margin-top: vw(7.88);
+        }
+        
+        &-title {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  
+  &-voice {
+    @include mq(pc) {
+      padding: remPC(12.37) 0 remPC(70);
+    }
+    
+    @include mq(sp) {
+      padding: 0 0 vw(77.97);
+    }
+    
+    &-main-title {
+      position: relative;
+      color: #295C9B;
+      font-weight: 500;
+      margin: 0 auto;
+      text-align: center;
+      
+      @include mq(pc) {
+        font-size: remPC(25);
+        line-height: remPC(63.09);
+        width: remPC(598);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(38);
+        line-height: vw(56);
+        width: vw(630);
+      }
+      
+      &-quote {
+        position: absolute;
+        
+        @include mq(pc) {
+          width: remPC(55);
+        }
+        
+        @include mq(sp) {
+          top: 50%;
+          transform: translateY(-50%);
+          width: vw(65.3);
+        }
+        
+        &.left {
+          left: 0;
+          
+          @include mq(pc) {
+            top: 0;
+          }
+        }
+        
+        &.right {
+          right: 0;
+          
+          @include mq(pc) {
+            bottom: 0;
+          }
+        }
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        margin: remPC(33.89) auto 0;
+        display: flex;
+        max-width: remPC(1160);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(6.72);
+        padding: 0 vw(20);
+      }
+    }
+    
+    &-item {
+      position: relative;
+      
+      @include mq(pc) {
+        box-shadow: remPC(10) remPC(10) remPC(10) 0 rgba(0, 0, 0, 0.1);
+        padding: remPC(25) remPC(20) remPC(51);
+        width: calc(50% - 39px);
+      }
+      
+      @include mq(sp) {
+        box-shadow: vw(10) vw(10) vw(10) 0 rgba(0, 0, 0, 0.1);
+        padding: vw(27.87) vw(26.3) vw(69.92);
+        margin-top: vw(61.63);
+      }
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-right: 78px;
+        }
+      }
+    }
+    
+    &-user-no {
+      text-align: right;
+      font-family: $montserrat;
+      font-weight: 600;
+      color: #295C9B;
+      
+      @include mq(pc) {
+        font-size: remPC(13);
+        line-height: remPC(16);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(22);
+        line-height: vw(27);
+      }
+    }
+    
+    &-info {
+      display: flex;
+      
+      @include mq(pc) {
+        margin-top: remPC(36);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(46.37);
+      }
+    }
+    
+    &-photo {
+      @include mq(pc) {
+        padding-right: remPC(20);
+      }
+      
+      @include mq(sp) {
+        padding-right: vw(26.29);
+      }
+      
+      &-img {
+        @include mq(pc) {
+          border-radius: remPC(10);
+          width: remPC(195);
+        }
+        
+        @include mq(sp) {
+          border-radius: vw(10);
+          width: vw(256.39);
+        }
+      }
+    }
+    
+    &-user {
+      &-info {
+        position: relative;
+      }
+      
+      &-company {
+        color: #295C9B;
+        font-weight: 800;
+        
+        @include mq(pc) {
+          margin-top: remPC(-4.5);
+          font-size: remPC(20);
+          line-height: remPC(29);
+          min-height: remPC(58);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(-6);
+          font-size: vw(26);
+          line-height: vw(38);
+          min-height: vw(76);
+        }
+      }
+      
+      &-position {
+        color: #707070;
+        font-weight: 400;
+        position: relative;
+        
+        @include mq(pc) {
+          font-size: remPC(14);
+          line-height: remPC(23);
+          min-height: remPC(99);
+        }
+        
+        @include mq(tb) {
+          min-height: remPC(69);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(18);
+          line-height: vw(28);
+          min-height: vw(129.15);
+        }
+        
+        .text {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      
+      &-name {
+        color: #707070;
+        font-weight: 500;
+        
+        @include mq(pc) {
+          font-size: remPC(16);
+          line-height: remPC(23);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(24);
+          line-height: vw(30);
+        }
+      }
+    }
+    
+    &-title {
+      position: relative;
+      color: #295C9B;
+      font-weight: 500;
+      letter-spacing: -0.03rem;
+      
+      @include mq(pc) {
+        margin-top: remPC(10);
+        padding: remPC(44) 0 remPC(65);
+        font-size: remPC(20);
+        line-height: remPC(30);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(13.15);
+        padding: vw(57.85) 0 vw(82.6);
+        font-size: vw(26);
+        line-height: vw(36);
+      }
+      
+      &-quote {
+        position: absolute;
+        color: #D9D9D9;
+        font-family: $font_jp_if;
+        font-weight: 600;
+        
+        @include mq(pc) {
+          font-size: remPC(55);
+          line-height: remPC(79);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(70);
+          line-height: vw(101);
+        }
+        
+        &.left {
+          top: 0;
+          left: 0;
+        }
+        
+        &.right {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    
+    &-content {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      
+      @include mq(pc) {
+        bottom: remPC(27);
+        height: remPC(48);
+      }
+      
+      @include mq(sp) {
+        bottom: vw(35.5);
+        height: vw(63.11);
+      }
+      
+      &-text {
+        color: #707070;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mq(pc) {
+          max-width: calc(100% - 240px);
+          font-size: remPC(16);
+          line-height: remPC(24);
+          left: remPC(20);
+        }
+        
+        @include mq(tb) {
+          max-width: calc(100% - 205px);
+        }
+        
+        @include mq(sp) {
+          max-width: vw(390);
+          font-size: vw(21);
+          line-height: vw(32);
+          left: vw(26.3);
+        }
+      }
+      
+      &-button {
+        border: 1px solid #003D7E;
+        border-radius: 60px;
+        color: #003D7E;
+        font-weight: 600;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        
+        @include mq(pc) {
+          width: 178px;
+          height: remPC(48);
+          font-size: remPC(20);
+          line-height: remPC(48);
+          right: remPC(20);
+        }
+        
+        @include mq(tb) {
+          width: 143px;
+        }
+        
+        @include mq(sp) {
+          width: vw(234.04);
+          height: vw(63.11);
+          font-size: vw(26);
+          line-height: vw(63.11);
+          right: vw(26.3);
+        }
+        
+        &:before {
+          content: "";
+          position: absolute;
+          background: #003D7E;
+          border-radius: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          
+          @include mq(pc) {
+            width: remPC(23);
+            height: remPC(23);
+            left: remPC(139);
+          }
+          
+          @include mq(sp) {
+            width: vw(30.24);
+            height: vw(30.24);
+            left: vw(182.76);
+          }
+        }
+        
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+          
+          @include mq(pc) {
+            width: remPC(5.7);
+            height: remPC(5.7);
+            border-top: remPC(3) solid #FFF;
+            border-right: remPC(3) solid #FFF;
+            left: remPC(147.09);
+          }
+          
+          @include mq(sp) {
+            width: vw(7.49);
+            height: vw(7.49);
+            border-top: vw(3) solid #FFF;
+            border-right: vw(3) solid #FFF;
+            left: vw(194.03);
+          }
+        }
+      }
+    }
+  }
+  
+  &-product {
+    background: #EBF6FE;
+    
+    @include mq(pc) {
+      padding: remPC(48) 0 remPC(83.66);
+    }
+    
+    @include mq(sp) {
+      padding: vw(63.13) 0 vw(82.61);
+    }
+    
+    &-title {
+      text-align: center;
+      color: #295C9B;
+      letter-spacing: 0.05rem;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        font-size: remPC(25);
+        line-height: remPC(37);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(36);
+        line-height: vw(54);
+      }
+    }
+    
+    &-desc {
+      text-align: center;
+      letter-spacing: 0.05rem;
+      font-weight: 400;
+      
+      @include mq(pc) {
+        margin-top: remPC(14);
+        font-size: remPC(18);
+        line-height: remPC(27);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(23);
+        font-size: vw(26);
+        line-height: vw(44);
+      }
+    }
+    
+    &-list {
+      text-align: center;
+      font-size: 0;
+      
+      @include mq(pc) {
+        margin: remPC(37) auto;
+        max-width: remPC(1000);
+      }
+      
+      @include mq(sp) {
+        margin: vw(65.18) auto;
+      }
+    }
+    
+    &-item {
+      display: inline-block;
+      
+      @include mq(pc) {
+        margin-bottom: remPC(58);
+        width: 25%;
+      }
+      
+      @include mq(sp) {
+        margin-bottom: vw(56.36);
+        width: 33.3%;
+      }
+    }
+    
+    &-photo {
+      @include mq(pc) {
+        max-height: remPC(151);
+      }
+      
+      @include mq(sp) {
+        max-height: vw(151);
+      }
+      
+      &-img {
+        @include mq(pc) {
+          max-height: remPC(151);
+        }
+        
+        @include mq(sp) {
+          max-height: vw(151);
+        }
+      }
+    }
+    
+    &-name {
+      p {
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        border-bottom: 3px solid #56A4D9;
+        
+        @include mq(pc) {
+          padding: 0 remPC(12) remPC(6);
+          font-size: remPC(20);
+          line-height: remPC(29);
+          margin-top: remPC(26);
+        }
+        
+        @include mq(sp) {
+          padding: 0 vw(1) vw(4);
+          font-size: vw(26);
+          line-height: vw(38);
+          margin-top: vw(21.46);
+        }
+      }
+    }
+  }
+  
+  &-factory {
+    @include mq(pc) {
+      padding: remPC(80) 0 remPC(94);
+    }
+    
+    @include mq(sp) {
+      padding: vw(114.39) 0 vw(140);
+    }
+    
+    &-photo {
+      @include mq(pc) {
+        max-width: remPC(1160);
+        margin: remPC(40.49) auto remPC(60);
+      }
+      
+      @include mq(sp) {
+        margin: vw(83.49) auto vw(55);
+      }
+    }
+  }
+  
+  &-flow {
+    @include mq(pc) {
+      padding-bottom: remPC(131);
+      background-repeat: no-repeat;
+      background-image: url("../img/pc/front/front-flow-bg.png");
+      background-size: remPC(1095.72);
+      background-position: top remPC(211.14) left remPC(-362.22);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(139);
+    }
+    
+    &-content {
+      margin: 0 auto;
+      
+      @include mq(pc) {
+        width: 100%;
+        max-width: remPC(1000);
+        padding: remPC(75.49) 0 remPC(71);
+        display: flex;
+        position: relative;
+      }
+      
+      @include mq(sp) {
+        width: vw(710);
+        padding: vw(91.49) 0 vw(47);
+      }
+      
+      &:before {
+        @include mq(pc) {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: remPC(665);
+          border-right: remPC(5) solid #27A7DD;
+          border-bottom: remPC(5) solid #27A7DD;
+          top: remPC(132.49);
+          left: 50%;
+          transform: translateX(-30px);
+        }
+      }
+      
+      &:after {
+        @include mq(pc) {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: remPC(665);
+          border-top: remPC(5) solid #27A7DD;
+          top: remPC(132.49);
+          left: 50%;
+        }
+      }
+    }
+    
+    &-column {
+      @include mq(pc) {
+        width: calc((100% - 60px) / 2);
+      }
+      
+      &.left {
+        @include mq(pc) {
+          margin-right: 60px;
+        }
+      }
+    }
+    
+    &-item {
+      position: relative;
+      background: #E9E9E9;
+      
+      @include mq(pc) {
+        height: remPC(119);
+        margin-bottom: remPC(103);
+      }
+      
+      @include mq(sp) {
+        height: vw(150);
+        margin-bottom: remPC(96);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(135deg);
+        
+        @include mq(pc) {
+          border-top: remPC(5) solid #27A7DD;
+          border-right: remPC(5) solid #27A7DD;
+          width: remPC(17.68);
+          height: remPC(17.68);
+          bottom: remPC(-45.6);
+        }
+        
+        @include mq(sp) {
+          border-top: vw(5) solid #27A7DD;
+          border-right: vw(5) solid #27A7DD;
+          width: vw(17.68);
+          height: vw(17.68);
+          bottom: remPC(-51);
+        }
+      }
+      
+      &.last-pc {
+        @include mq(pc) {
+          margin-bottom: 0;
+        }
+        
+        &:before {
+          @include mq(pc) {
+            display: none;
+          }
+        }
+      }
+      
+      &.last-sp:before {
+        @include mq(sp) {
+          display: none;
+        }
+        
+        &:before {
+          @include mq(sp) {
+            display: none;
+          }
+        }
+      }
+      
+      &.step5:after {
+        @include mq(pc) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 100%;
+          transform: translateY(-50%) rotate(45deg);
+          border-top: remPC(5) solid #27A7DD;
+          border-right: remPC(5) solid #27A7DD;
+          width: remPC(17.68);
+          height: remPC(17.68);
+        }
+      }
+    }
+    
+    &-point {
+      position: absolute;
+      border-bottom: 3px solid #295C9B;
+      font-family: $montserrat;
+      font-weight: 600;
+      left: 0;
+      color: #003D7E;
+      transform: scale(0.5) translate(-50%, -50%);
+      
+      @include mq(pc) {
+        top: remPC(-26);
+        padding-bottom: remPC(2);
+        font-size: remPC(22);
+        line-height: remPC(28);
+      }
+      
+      @include mq(sp) {
+        top: vw(-24);
+        padding-bottom: vw(5);
+        font-size: vw(24);
+        line-height: vw(30);
+      }
+    }
+    
+    &-number {
+      position: absolute;
+      font-family: $montserrat;
+      font-weight: 600;
+      color: #003D7E;
+      letter-spacing: 0.1rem;
+      
+      @include mq(pc) {
+        top: remPC(-40);
+        left: remPC(29);
+        font-size: remPC(55);
+        line-height: remPC(67);
+      }
+      
+      @include mq(sp) {
+        top: vw(-40);
+        left: vw(36);
+        font-size: vw(60);
+        line-height: vw(73);
+      }
+    }
+    
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: remPC(32);
+      transform: translateY(-50%);
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.03rem;
+      
+      @include mq(pc) {
+        font-size: remPC(18);
+        line-height: remPC(30);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(30);
+        line-height: vw(40);
+      }
+      
+      .point {
+        color: #003D7E;
+        
+        @include mq(pc) {
+          font-size: remPC(22);
+          line-height: remPC(39);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(32);
+          line-height: vw(39);
+        }
+      }
+    }
+    
+    &-button {
+      @include mq(pc) {
+        margin-left: remPC(60);
+        width: remPC(372);
+        padding-right: remPC(40);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(30);
+        width: vw(501);
+        padding-right: remPC(34.62);
+      }
+      
+      &-area {
+        @include mq(pc) {
+          text-align: center;
+        }
+        
+        .front-button {
+          @include mq(pc) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  
+  &-column {
+    @include mq(pc) {
+      padding-bottom: remPC(175);
+      background-image: url("../img/pc/front/front-column-bg.png");
+      background-position: top remPC(-123) left remPC(45.88);
+      background-size: remPC(1936.03);
+      background-repeat: no-repeat;
+      background-color:rgba(255,255,255,0.75);
+      background-blend-mode:lighten;
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(120);
+    }
+    
+    &-en {
+      @include mq(pc) {
+        color: #E9E9E9;
+      }
+    }
+    
+    &-main {
+      @include mq(pc) {
+        margin: 0 auto;
+        max-width: remPC(1000);
+        padding: remPC(10) 0 remPC(65);
+      }
+      
+      @include mq(sp) {
+        padding: vw(15) vw(20) vw(80);
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        margin-top: remPC(40);
+        display: flex;
+      }
+    }
+    
+    &-item {
+      position: relative;
+      background: #FFF;
+      
+      @include mq(pc) {
+        box-shadow: remPC(10) remPC(10) remPC(10) 0 rgba(0, 0, 0, 0.1);
+        padding: remPC(25) remPC(30) remPC(33);
+        width: calc(50% - 20px);
+      }
+      
+      @include mq(sp) {
+        box-shadow: vw(10) vw(10) vw(10) 0 rgba(0, 0, 0, 0.1);
+        padding: vw(37) vw(43) vw(49.33);
+        margin-top: vw(58);
+      }
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-right: 40px;
+        }
+      }
+    }
+    
+    &-top {
+      overflow: hidden;
+    }
+    
+    &-mark {
+      color: #FFF;
+      background: #D12929;
+      font-family: $montserrat;
+      font-weight: 600;
+      float: left;
+      text-align: center;
+      
+      @include mq(pc) {
+        font-size: remPC(14);
+        line-height: remPC(22);
+        width: remPC(53);
+        height: remPC(22);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(20);
+        line-height: vw(32);
+        width: vw(78);
+        height: vw(32);
+      }
+    }
+    
+    &-no {
+      color: #295C9B;
+      font-family: $montserrat;
+      font-weight: 600;
+      float: right;
+      text-align: right;
+      
+      @include mq(pc) {
+        font-size: remPC(13);
+        line-height: remPC(22);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(26);
+        line-height: vw(32);
+      }
+    }
+    
+    &-title {
+      color: #295C9B;
+      font-weight: 600;
+      
+      @include mq(pc) {
+        font-size: remPC(20);
+        line-height: remPC(30);
+        margin-top: remPC(19);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(32);
+        line-height: vw(38);
+        margin-top: vw(29);
+        height: vw(98);
+      }
+    }
+    
+    &-info {
+      display: flex;
+      
+      @include mq(pc) {
+        margin-top: remPC(15);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(17);
+      }
+    }
+    
+    &-thumb {
+      overflow: hidden;
+      background: #E9E9E9;
+      
+      @include mq(pc) {
+        margin-right: remPC(25);
+        border-radius: remPC(10);
+        width: remPC(195);
+        min-width: remPC(195);
+        height: remPC(172);
+      }
+      
+      @include mq(sp) {
+        margin-right: vw(37);
+        border-radius: vw(10);
+        width: vw(288);
+        min-width: vw(288);
+        height: vw(255);
+      }
+    }
+    
+    &-content {
+      position: relative;
+      
+      @include mq(pc) {
+        min-height: remPC(172);
+      }
+      
+      @include mq(sp) {
+        min-height: vw(255);
+      }
+    }
+    
+    &-text {
+      @include mq(pc) {
+        font-size: remPC(16);
+        line-height: remPC(24);
+        padding-bottom: remPC(55);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(28);
+        line-height: vw(36);
+        padding-bottom: vw(80);
+      }
+    }
+    
+    &-button {
+      border: 1px solid #003D7E;
+      border-radius: 60px;
+      color: #003D7E;
+      font-weight: 600;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      
+      @include mq(pc) {
+        width: remPC(178);
+        height: remPC(48);
+        font-size: remPC(20);
+        line-height: remPC(48);
+      }
+      
+      @include mq(sp) {
+        width: vw(234.04);
+        height: vw(63.11);
+        font-size: vw(26);
+        line-height: vw(63.11);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        background: #003D7E;
+        border-radius: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mq(pc) {
+          width: remPC(23);
+          height: remPC(23);
+          right: remPC(16);
+        }
+        
+        @include mq(sp) {
+          width: vw(30.24);
+          height: vw(30.24);
+          right: vw(21);
+        }
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        
+        @include mq(pc) {
+          width: remPC(5.7);
+          height: remPC(5.7);
+          border-top: remPC(3) solid #FFF;
+          border-right: remPC(3) solid #FFF;
+          right: remPC(24.88);
+        }
+        
+        @include mq(sp) {
+          width: vw(7.49);
+          height: vw(7.49);
+          border-top: vw(3) solid #FFF;
+          border-right: vw(3) solid #FFF;
+          right: vw(32.08);
+        }
+      }
+    }
+    
+    &-tag {
+      background-color: #E5F4FF;
+      background-repeat: no-repeat;
+      font-family: $yugothic;
+      
+      @include mq(pc) {
+        padding: remPC(14) remPC(13) remPC(14) remPC(44);
+        font-size: remPC(14);
+        line-height: remPC(19);
+        background-image: url("../img/pc/front/front-tag-icon.png");
+        background-size: remPC(21);
+        background-position: top remPC(13) left remPC(13);
+        margin-top: remPC(25);
+      }
+      
+      @include mq(sp) {
+        padding: vw(20) vw(19.22) vw(20) vw(65.1);
+        font-size: vw(20);
+        line-height: vw(27);
+        background-image: url("../img/sp/front/front-tag-icon.png");
+        background-size: vw(31.07);
+        background-position: top vw(19.23) left vw(19.22);
+        margin-top: vw(36.15);
+      }
+    }
+  }
+  
+  &-leave {
+    @include mq(pc) {
+      padding-bottom: remPC(147);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(137.68);
+    }
+    
+    &-photo {
+      font-size: 0;
+      
+      @include mq(pc) {
+        max-width: remPC(1000);
+        margin: remPC(82) auto remPC(60);
+      }
+      
+      @include mq(sp) {
+        max-width: vw(710);
+        margin: vw(91) auto vw(70);
+      }
+      
+      &-img {
+        @include mq(pc) {
+          width: 25%;
+        }
+        
+        @include mq(sp) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

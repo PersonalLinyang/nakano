@@ -1,0 +1,365 @@
+// 各ページを構成する、ヘッダー、メインコンテンツエリア、サイドバー、フッターなどのスタイルをエリアごとに管理
+// ※ページ全体からみたレイアウトに対するスタイルを定義する
+// ※外枠のみ定義。子要素はなるべく入れない
+// ※ヘッダーやフッターの中身はp-で定義する
+
+.footer {
+  &-line {
+    margin: 0 auto;
+    
+    @include mq(pc) {
+      padding-bottom: remPC(64.54);
+      max-width: remPC(1000);
+      display: flex;
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(25.49);
+      max-width: vw(710);
+    }
+    
+    &-item {
+      position: relative;
+      box-shadow: vw(10) vw(10) vw(10) 0 rgba(0, 0, 0, 0.1);
+      
+      @include mq(pc) {
+        width: calc(50% - 20px);
+        height: remPC(177);
+      }
+      
+      @include mq(sp) {
+        margin-bottom: vw(52.51);
+      }
+      
+      &:first-child {
+        @include mq(pc) {
+          margin-right: 40px;
+        }
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        background: #FFF;
+        border-radius: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mq(pc) {
+          right: remPC(17);
+          width: remPC(34);
+          height: remPC(34);
+        }
+        
+        @include mq(sp) {
+          right: vw(25);
+          width: vw(50);
+          height: vw(50);
+        }
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        
+        @include mq(pc) {
+          width: remPC(8.41);
+          height: remPC(8.41);
+          border-top: remPC(3) solid #003D7E;
+          border-right: remPC(3) solid #003D7E;
+          right: remPC(30.55);
+        }
+        
+        @include mq(sp) {
+          width: vw(12.43);
+          height: vw(12.43);
+          border-top: vw(3) solid #003D7E;
+          border-right: vw(3) solid #003D7E;
+          right: vw(45.2);
+        }
+      }
+      
+      &-text {
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.03rem;
+        color: #FFF;
+        
+        @include mq(pc) {
+          font-size: remPC(24);
+          line-height: remPC(38);
+          margin: remPC(14) remPC(10);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(32);
+          line-height: vw(47);
+          padding-top: vw(26.7);
+        }
+      }
+    }
+  }
+  
+  &-column {
+    margin: 0 auto;
+    
+    @include mq(pc) {
+      padding-bottom: remPC(99.93);
+      max-width: remPC(800);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(91);
+      max-width: vw(710);
+    }
+    
+    &-item {
+      position: relative;
+      box-shadow: vw(10) vw(10) vw(10) 0 rgba(0, 0, 0, 0.1);
+      
+      @include mq(pc) {
+        height: remPC(140);
+        margin-bottom: remPC(42.46);
+      }
+      
+      @include mq(sp) {
+        margin-bottom: vw(36);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        background: #003D7E;
+        border-radius: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mq(pc) {
+          right: remPC(21);
+          width: remPC(34);
+          height: remPC(34);
+        }
+        
+        @include mq(sp) {
+          right: vw(25);
+          width: vw(50);
+          height: vw(50);
+        }
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        
+        @include mq(pc) {
+          width: remPC(8.41);
+          height: remPC(8.41);
+          border-top: remPC(3) solid #FFF;
+          border-right: remPC(3) solid #FFF;
+          right: remPC(34.55);
+        }
+        
+        @include mq(sp) {
+          width: vw(12.43);
+          height: vw(12.43);
+          border-top: vw(3) solid #FFF;
+          border-right: vw(3) solid #FFF;
+          right: vw(45.2);
+        }
+      }
+      
+      &-text {
+        font-weight: 600;
+        color: #084889;
+        font-family: $yugothic;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include mq(pc) {
+          font-size: remPC(24);
+          line-height: remPC(32);
+          left: remPC(323.5);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(32);
+          line-height: vw(42);
+        }
+      }
+    }
+  }
+  
+  &-voice {
+    background-position: left;
+    background-repeat: no-repeat;
+    
+    @include mq(pc) {
+      background-image: url("../img/pc/common/footer-voice-bg.jpg");
+    }
+    
+    @include mq(sp) {
+      background-image: url("../img/sp/common/footer-voice-bg.jpg");
+      background-size: 100%;
+      height: vw(261.81);
+    }
+  }
+  
+  &-qa {
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    @include mq(pc) {
+      background-image: url("../img/pc/common/footer-qa-bg.jpg");
+    }
+    
+    @include mq(sp) {
+      background-image: url("../img/sp/common/footer-qa-bg.jpg");
+      background-size: 100%;
+      height: vw(261);
+    }
+  }
+  
+  &-contract {
+    background: linear-gradient(to right, #E9E9E9, #FFF);
+    
+    @include mq(sp) {
+      height: vw(192);
+    }
+    
+    &-content {
+      height: 100%;
+      background-repeat: no-repeat;
+      
+      @include mq(pc) {
+        background-image: url("../img/pc/common/footer-contract-bg.png");
+        background-position: top remPC(20.41) left remPC(22.5);
+        background-size: remPC(201.49);
+      }
+      
+      @include mq(sp) {
+        background-image: url("../img/sp/common/footer-contract-bg.png");
+        background-position: top vw(40) left vw(23.18);
+        background-size: vw(253);
+      }
+    }
+    
+    &-text {
+      @include mq(sp) {
+        left: vw(294);
+        text-align: center;
+      }
+    }
+  }
+  
+  &-top {
+    background-repeat: no-repeat;
+    
+    @include mq(pc) {
+      background-image: url("../img/pc/common/footer-top-bg.png");
+      background-position: center;
+    }
+    
+    @include mq(sp) {
+      background-image: url("../img/sp/common/footer-top-bg.png");
+      background-position: right;
+      background-size: vw(1017);
+      height: vw(189);
+    }
+    
+    &-content {
+      height: 100%;
+      
+      @include mq(pc) {
+        background: linear-gradient(to right, #FFF 50%, transparent 70.625%);
+      }
+    }
+    
+    &-img {
+      position: absolute;
+      
+      @include mq(pc) {
+        width: remPC(174.75);
+        top: 50%;
+        left: remPC(52.63);
+        transform: translateY(-50%);
+      }
+      
+      @include mq(sp) {
+        width: vw(138.11);
+        top: vw(55);
+        left: vw(82.83);
+      }
+    }
+    
+    &-text {
+      @include mq(sp) {
+        top: vw(93.7);
+        transform: none;
+        left: vw(55.83);
+      }
+    }
+  }
+  
+  &-map {
+    text-align: center;
+    
+    @include mq(pc) {
+      padding-bottom: remPC(20.5);
+      font-size: 0;
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(36);
+    }
+    
+    &-item {
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      color: #003D7E;
+      
+      @include mq(pc) {
+        display: inline-block;
+        padding: 0 remPC(24);
+        font-size: remPC(16);
+        line-height: remPC(16);
+        border-left: 1px solid #003D7E;
+      }
+      
+      @include mq(sp) {
+        font-size: vw(30);
+        line-height: vw(70);
+      }
+      
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+  
+  &-company {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #000;
+    border-top: 1px solid #053D7E;
+    
+    @include mq(pc) {
+      padding: remPC(13.5) 0 remPC(41.15);
+      font-size: remPC(14);
+      line-height: remPC(18);
+    }
+    
+    @include mq(sp) {
+      max-width: vw(710);
+      margin: 0 auto;
+      padding: vw(40) 0 vw(46);
+      font-size: vw(24);
+      line-height: vw(34);
+    }
+  }
+}
