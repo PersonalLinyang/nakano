@@ -1,0 +1,243 @@
+/* ODM/OEMの流れ（製造フロー）*/
+
+.manufacturing {
+  &-title {
+    margin: remPC(80) 0;
+  }
+
+  &-arrow {
+    text-align: center;
+
+    @include mq(pc) {
+      margin: remPC(40) 0;
+    }
+
+    @include mq(sp) {
+      margin: remPC(30) 0 remPC(40);
+    }
+  }
+
+  &-block {
+    background-color: #f8f8f9;
+    position: relative;
+
+    @include mq(pc) {
+      height: remPC(140);
+    }
+
+    &-number {
+      position: absolute;
+
+      @include mq(pc) {
+        top: remPC(6);
+        left: remPC(108);
+      }
+
+      @include mq(sp) {
+        left: 33%;
+        right: 67%;
+      }
+
+      &-step {
+        position: absolute;
+        border-bottom: 3px solid #295c9b;
+        font-family: $montserrat;
+        font-weight: 600;
+        left: 0;
+        color: #003d7e;
+        transform: scale(0.5) translate(-50%, -50%);
+
+        @include mq(pc) {
+          top: remPC(-27);
+          padding-bottom: remPC(2);
+          font-size: remPC(22);
+          line-height: remPC(28);
+        }
+
+        @include mq(sp) {
+          top: vw(-42);
+          padding-bottom: vw(5);
+          font-size: vw(34);
+          line-height: vw(40);
+        }
+      }
+
+      &-number {
+        position: absolute;
+        font-family: $montserrat;
+        font-weight: 600;
+        color: #003d7e;
+        letter-spacing: 0.1em;
+
+        @include mq(pc) {
+          top: remPC(-40);
+          left: remPC(30);
+          font-size: remPC(55);
+          line-height: remPC(67);
+        }
+
+        @include mq(sp) {
+          top: vw(-63);
+          left: vw(58);
+          font-size: vw(87);
+          line-height: vw(106);
+        }
+      }
+    }
+
+    &-contents {
+      @include mq(pc) {
+        display: flex;
+        align-items: center;
+        height: remPC(140);
+      }
+
+      @include mq(sp) {
+        padding: 40px 20px 20px;
+      }
+
+      &-title {
+        font-size: remPC(22);
+        color: #084889;
+
+        @include mq(pc) {
+          width: 35%;
+          border-right: 1px solid $color_dblue;
+          height: remPC(90);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include mq(sp) {
+          margin: 0 0 remPC(20);
+          padding: 0 0 remPC(20);
+          width: 100%;
+          border-bottom: 1px solid $color_dblue;
+        }
+
+        p {
+          text-align: center;
+
+          span {
+            font-size: remPC(15);
+          }
+        }
+      }
+
+      &-text {
+        font-size: remPC(16);
+        line-height: remPC(30);
+
+        @include mq(pc) {
+          padding: 0 20px;
+          width: 65%;
+        }
+      }
+    }
+
+    &.manufacturing-block-last {
+      background-color: #e9e9e9;
+    }
+  }
+
+  &-button {
+    padding: remPC(60) 0 remPC(160);
+
+    @include mq(pc) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-btn {
+      background: #003d7e;
+      border-radius: 60px;
+      color: #fff;
+      font-weight: 600;
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+
+      &:hover {
+        background: rgba(0, 61, 126, 0.7);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: #fff;
+        border-radius: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        @include mq(pc) {
+          width: 2.125rem;
+          height: 2.125rem;
+          right: 1.25rem;
+        }
+
+        @include mq(sp) {
+          width: 6.60133vw;
+          height: 6.60133vw;
+          right: 3.10667vw;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+        pointer-events: none;
+
+        @include mq(pc) {
+          width: 0.52563rem;
+          height: 0.52563rem;
+          border-top: 0.1875rem solid #003d7e;
+          border-right: 0.1875rem solid #003d7e;
+          right: 2.09687rem;
+        }
+
+        @include mq(sp) {
+          width: 1.63333vw;
+          height: 1.63333vw;
+          border-top: 0.4vw solid #003d7e;
+          border-right: 0.4vw solid #003d7e;
+          right: 5.73733vw;
+        }
+      }
+    }
+
+    &-after {
+      @include mq(pc) {
+        width: 28rem;
+        font-size: 1.25rem;
+        line-height: 3.75rem;
+      }
+
+      @include mq(sp) {
+        margin: 0 auto remPC(10);
+        width: 90%;
+        font-size: 4vw;
+        line-height: 3.75rem;
+      }
+    }
+
+    &-factory {
+      @include mq(pc) {
+        width: 28rem;
+        font-size: 1.25rem;
+        line-height: 3.75rem;
+      }
+
+      @include mq(sp) {
+        width: 90%;
+        font-size: 4vw;
+        line-height: 3.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,795 @@
+/* about us */
+
+.features {
+	padding: remPC(80) 0;
+	.main-desc {
+		line-height: calc(36/16);
+		@include mq(sp) {
+			font-size: rem(16);
+			line-height: calc(25/16);
+		}
+	}
+  
+	&-main {
+		background: #EBF6FE;
+		margin: remPC(100) 0;
+		padding: remPC(60) 0;
+		@include mq(sp) {
+			margin: vw(77) 0;
+			padding: vw(68) 0;
+			}
+		
+		&__block {
+			margin:remPC(80) 0 remPC(160);
+			@include mq(sp) {
+				margin: rem(55) 0 rem(95);
+			}
+			&__h3 {
+				display: flex;
+				align-items: center;
+				img {
+					max-width: remPC(132);
+					@include mq(sp) {
+						max-width: rem(116);
+					}
+				}
+				span {
+					font-size: remPC(33);
+					color:$color_blue1;
+					margin: 0 0 0 remPC(40);
+					font-weight: 700;
+					@include mq(sp) {
+						font-size: rem(20);
+						line-height: calc(30/20);
+						margin: 0 0 0 vw(30);
+					}
+				}
+			}
+
+			&__point03__gray-bk {
+				background-color: #e9e9e9;
+			}
+
+			&__text {
+				margin: remPC(30) 0 0 0;
+				font-size: remPC(16);
+				line-height: calc(24/16);
+				@include mq(sp) {
+					margin: rem(40) 0 0 0;
+					font-size: rem(16);
+					line-height: calc(25/16);
+				}
+			}
+			&__h4 {
+				font-size: remPC(20);
+				color:$color_blue1;
+				margin: remPC(53) 0 remPC(20);
+				font-weight: 700;
+				@include mq(sp) {
+					margin: rem(40) 0 rem(20);
+					font-size: rem(16);
+					text-align: center;
+				}
+			}
+			
+			&__content {
+				background: #fff;
+				padding: remPC(40);
+				margin: remPC(60) 0 0 0;
+				@include mq(sp) {
+					padding: rem(25) rem(20);
+					margin: rem(20) 0 0 0;
+					}
+				.features-main__h3 {
+					font-size: remPC(28);
+					color:$color_blue1;
+					border-bottom: 3px solid $color_blue1;
+					padding-bottom: 10px;
+					font-weight: 700;
+					@include mq(sp) {
+						font-size: rem(20);
+					}
+				}
+				&__inner {
+					.features-main__h4 {
+						font-size: remPC(20);
+						color:$color_blue2;
+						margin: remPC(20) 0;
+						font-weight: 700;
+						@include mq(sp) {
+							font-size: rem(18);
+							text-align: left;
+							margin: rem(25) 0 0 0;
+							line-height: calc(26/18);
+						}
+						&.point01-h4 {
+							margin: remPC(50) 0 remPC(30);
+							@include mq(sp) {
+								margin: rem(25) 0 0 0;
+							}
+						}
+					}
+					.features-main__text {
+						font-size: remPC(16);
+						line-height: calc(28/16);
+						font-weight: 400;
+						margin: remPC(30) 0 0 0;
+						@include mq(sp) {
+							font-size: rem(16);
+							text-align: left;
+							margin: rem(30) 0 0 0;
+						}
+						strong {
+							font-weight: 700;
+						}
+						&.txt-s {
+							font-size: remPC(13);
+							margin: remPC(5) 0 0 0;
+						}
+					}
+					
+					.main-button {
+							width: remPC(388);
+							height: remPC(60);
+							margin: 0 auto remPC(50);
+							text-align: center;
+							@include mq(sp) {
+									width: 100%;
+									height: rem(50);
+								}
+							a {
+								font-size: remPC(20);
+								line-height: remPC(60);
+								font-weight: 700;
+								@include mq(sp) {
+									font-size: rem(15);
+									line-height: rem(50)
+								}
+							}
+						}
+					
+					.features-main__h5 {
+						font-size: remPC(16);
+						font-weight: 700;
+						position: relative;
+						@include mq(sp) {
+							font-size: rem(16);
+							margin: vw(20) 0;
+						}
+						&::before {
+							content:"●";
+							font-size: remPC(16);
+							color:$color_light_blue;
+							margin:0 5px 0 0;
+							@include mq(sp) {
+							font-size: rem(16);
+						}
+						}
+					}
+					&__gray {
+						background: #E9E9E9;
+						padding: remPC(20);
+						margin: remPC(20) 0 remPC(60);
+						@include mq(sp) {
+							padding:rem(20) rem(10);
+							margin: rem(20) 0 rem(42);
+							&:last-child {
+								margin:rem(30) 0 0 0;
+							}
+						}
+						&.point01 {
+							margin: remPC(30) 0 0 0;
+							@include mq(sp) {
+								margin: rem(30) 0 rem(42);
+								&:last-child {
+									margin:rem(30) 0 0 0;
+								}
+							}
+
+							}
+						.features-main__gray__h4 {
+							font-size: remPC(18);
+							margin: 0;
+							color:$color_blue2;
+							font-weight: 700;
+							@include mq(sp) {
+								font-size: rem(16);
+							}
+						}
+						ul {
+							margin: remPC(20) 0 0 0;
+							@include mq(sp) {
+								margin: vw(20);
+							}
+							li {
+								font-size: remPC(16);
+								font-weight: 500;
+								margin: 0 0 remPC(15) 0;
+								position: relative;
+								padding: 0 0 0 remPC(20);
+								@include mq(sp) {
+									margin: 0 0 rem(15) 0;
+									padding: 0 0 0 rem(20);
+									font-size: rem(16);
+								}
+								&:last-child {
+									margin: 0;
+								}
+							}
+							&.check {
+								li {
+								&::before {
+									content:"";
+									background: url("../../assets/img/pc/features/icon-check.svg") center / contain no-repeat;
+									width: remPC(14);
+									height: remPC(14);
+									position: absolute;
+									left: 0;
+									top:remPC(3);
+									@include mq(sp) {
+										width: rem(14);
+										height: rem(14);
+									}
+								}
+							}
+							}	
+						}
+						.features-main__gray__text {
+							font-size: remPC(16);
+							margin: 0;
+							line-height: calc(28/16);
+							font-weight: 400;
+
+							&__bold {
+								font-weight: 700;
+							}
+						}
+						.flex-column {
+							@include mq(sp) {
+								display: block;
+							}
+							.btn-wh {
+								display: inline-block;
+								margin: 0 10px;
+								&:last-child {
+									margin: 0 0 0 10px;
+								}
+								@include mq(sp) {
+								width: 100%;
+								margin: vw(25) 0 0 0;
+									&:last-child {
+										margin: vw(25) 0 0 0;
+									}
+								}
+							}
+						}
+					}
+					&__box {
+						margin: 0 0 remPC(65) 0;
+						.features-main__h4__bdr {
+							font-size: remPC(18);
+							color:$color_blue2;
+							border-bottom: 1px solid $color_blue2;
+							padding-bottom: 5px;
+							font-weight: 700;
+							margin: remPC(20) 0;
+							@include mq(sp) {
+									font-size: rem(16);
+								}
+						}
+						.features-main__block__content__inner__gray {
+							margin: remPC(20) 0 remPC(30);
+						}
+					}
+					
+				}
+				&.point03 {
+					.features-main__block__content__inner {
+						margin: 0 0 remPC(120) 0;
+						&:last-child {
+							margin: 0;
+						}
+						@include mq(sp) {
+							margin: 0 0 rem(65) 0;
+						}
+						.point03_pictxt {
+							@include mq(pc) {
+								padding: 0 remPC(20) remPC(25);
+							}
+
+							@include mq(sp) {
+								padding: 0 vw(20) vw(40);
+							}
+
+							&__pic {
+								
+								// max-width: remPC(278);
+
+								@include mq(sp) {
+									max-width: 100%;
+									margin-bottom: rem(30) 0 0 0;
+								}
+							}
+							&__txt {
+								padding: 0 0 0 remPC(25);
+
+								@include mq(pc) {
+									width: 86%;
+								}
+
+								@include mq(sp) {
+									padding: 0;
+									margin: vw(30) 0 0 0;
+								}
+								&__p {
+									margin: 0;
+									font-size: remPC(16);
+									line-height: calc(28/16);
+									font-weight: 400;
+									@include mq(sp) {
+										font-size: rem(16);
+										text-align: left;
+									}
+									& + p{
+										margin: remPC(15) 0 0 0;
+									}
+								}
+								&__link {
+									margin: remPC(40) 0 0 0;
+									@include mq(sp) {
+										margin: rem(30) 0 0 0;
+									}
+									a {
+										color:$color_light_blue;
+										font-size: remPC(17);
+										font-weight: 500;
+										text-decoration: underline;
+
+										@include mq(sp) {
+											font-size: rem(13);
+											line-height: calc(24/16);
+										}
+
+										&::after {
+											content:"";
+											border-top: 3px solid $color_light_blue;
+											border-right: 3px solid $color_light_blue;
+											transform: rotate(45deg);
+											display: inline-block;
+											width: remPC(13);
+											height: remPC(13);
+											margin: 0 0 0 remPC(10);
+
+											@include mq(sp) {
+												margin: 0 0 0 vw(6);
+												width: rem(10);
+												height: rem(10);
+											}
+										}
+									}
+									p {
+										margin: remPC(5);
+										color:$color_light_blue;
+										font-size: remPC(12);
+										font-weight: 700;
+										@include mq(sp) {
+											font-size: rem(11);
+										}
+									}
+								}
+							}
+							&.flex-column {
+								@include mq(sp) {
+									display: block;
+								}
+							}
+						}
+					}
+					.features-main__block__content__inner__gray {
+						margin: remPC(20) 0;
+					}
+					.features-main__block__content__inner h4 {
+						margin: remPC(50) 0 0 0;
+						@include mq(sp) {
+									margin: rem(25) 0 0 0;
+								}
+					}
+					.point03_img {
+						max-width: remPC(598);
+						width: 100%;
+						margin: 0 0 remPC(25) 0;
+					}
+					.features-main__block__content__inner__gray ul {
+						margin: remPC(5) 0 0 0;
+						padding: 0 0 0 remPC(20);
+						li {
+							margin: 0;
+							list-style-type: disc;
+							padding: 0;
+							line-height: calc(28/16);
+							&::before {
+								content: none;
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	&-advance {
+		margin: remPC(70) 0 0 0;
+		h2 {
+			span {
+				display: block;
+				&.main-title-en {
+					color:#fff;
+				}
+			}
+		}
+		&__text {
+			font-size: remPC(16);
+			font-weight: 400;
+			text-align: center;
+			margin: remPC(30) auto 0;
+			line-height: calc(24/16);
+				@include mq(sp) {
+					font-size: rem(16);
+					margin: rem(30) auto 0;
+				}
+		}
+		&__map {
+			margin: remPC(50) auto 0;
+			max-width: remPC(537);
+			@include mq(sp) {
+				margin: rem(40) auto 0;
+				max-width: 100%;
+			}
+		}
+		.main-button {
+			width: rem(500);
+			margin: remPC(50) auto remPC(87);
+			@include mq(sp) {
+				width: 100%;
+				margin: rem(20) auto 0;
+			}
+			a {
+				font-size: remPC(20);
+				@include mq(sp) {
+					font-size: rem(15);
+				}
+			}
+		}
+	}
+	
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+	}
+
+/* モーダル背景 */
+.modal-bg{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* モーダル本体 */
+.modal-content__features{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow-y: scroll;
+	height:auto;
+	width: 100%;
+	max-width:remPC(1000);
+	background: #fff;
+	padding: remPC(50);
+	text-align: center;
+	border: 5px solid $color_blue1;
+
+	&.scroll {
+		@include mq(pc) {
+			height: 100vh;
+		}
+	}
+
+	// @include mq(pc) {
+	// 	height: 90vh;
+	// 	max-height: remPC(585);
+	// }
+
+	@include mq(sp) {
+		width: 95%;
+		height: 100vh;
+		padding:rem(55) rem(10);
+	}
+	&__h3 {
+		font-size: remPC(26);
+		color: $color_blue1;
+		font-weight: 700;
+		@include mq(sp) {
+			font-size: rem(17);
+			line-height: 1.7;
+		}
+		span {
+			&.icon-original {
+				background: #E9E9E9;
+				color:#000;
+				text-align: center;
+				padding: remPC(5) remPC(15);
+				font-size: remPC(16);
+				font-weight: 400;
+				display: inline-block;
+				@include mq(sp) {
+					font-size: rem(11);
+					padding: rem(5) rem(15);
+				}
+			}
+			&.text-l {
+				font-size: remPC(32);
+				margin:0 remPC(5);
+				@include mq(sp) {
+					font-size: rem(17);
+					margin:0 0 0 rem(5);
+				}
+			}
+		}
+	}
+	&__h4 {
+		font-size: remPC(20);
+		color:#000;
+		font-weight: 700;
+		margin: remPC(50) 0 0 0;
+		@include mq(sp) {
+			margin: rem(15) 0 0 0;
+			font-size: rem(15);
+		}
+
+		&.flavonoids-h4 {
+			margin: remPC(20) 0 0 0;
+
+			@include mq(pc) {
+				line-height: remPC(32);
+			}
+
+			@include mq(sp) {
+				line-height: vw(48);
+			}
+		}
+	}
+	&__figure {
+		@include mq(sp) {
+			margin: rem(40) 0 0 0;
+		}
+		figure {
+			width: 100%;
+			margin: remPC(35) 0 0 0;
+			figcaption {
+				.text {
+					display: flex;
+					justify-content: flex-start;
+					margin: remPC(25) 0 0 0;
+					&__caption {
+						display: flex;
+						margin: 0 remPC(30) 0 0;
+						text-align: left;
+						
+						@include mq(sp) {
+							margin: 0 rem(30) 0 0;
+							align-items: flex-start;
+						}
+						img {
+							width: remPC(25);
+							@include mq(sp) {
+								width: rem(18);
+							}
+						}
+						span {
+							font-size: remPC(16);
+							@include mq(sp) {
+								font-size: rem(9);
+							}
+						}	
+					}
+					&__modal02 {
+						display: flex;
+						margin: remPC(30) 0 0 0;
+						@include mq(sp) {
+							display: block;
+							margin: rem(10) 0 0 0;
+						}
+						.text__caption {
+							display: block;
+							text-align: left;
+							&:last-child {
+								margin: 0 0 0 remPC(20);
+								@include mq(sp) {
+									margin: rem(10) 0 0;
+								}
+							}
+							&__text {
+								font-size: remPC(16);
+								font-weight: 400;
+								color:#000;
+								margin: 0;
+								@include mq(sp) {
+									font-size: rem(10);
+								}
+							}
+							&__list {
+								padding: 0 0 0 remPC(30);
+								@include mq(sp) {
+										padding: 0 0 0 rem(20);
+									}
+								li {
+									list-style-type: disc;
+									line-height: calc(22/16);
+									font-size: remPC(16);
+									@include mq(sp) {
+										font-size: rem(10);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&__caption {
+    	font-weight: 700;
+			position: relative;
+
+			@include mq(pc) {
+				margin: remPC(40) 0 0;
+				font-size: remPC(18);
+				line-height: remPC(26);
+			}
+
+			@include mq(sp) {
+				margin: vw(40) 0 0;
+				font-size: vw(26);
+				line-height: vw(42);
+			}
+
+			&::before {
+				@include mq(pc) {
+					content: "";
+					background-image: url('../img/pc/features/modal/brackets-left.svg');
+					background-repeat: no-repeat;
+					background-position: left 0 center;
+					background-size: remPC(12);
+					height: remPC(110);
+					position: absolute;
+					width: remPC(21);
+					top: remPC(-26);
+					left: remPC(32);
+				}
+			}
+
+			&::after {
+				@include mq(pc) {
+					content: "";
+					background-image: url('../img/pc/features/modal/brackets-right.svg');
+					background-repeat: no-repeat;
+					background-position: left 0 center;
+					background-size: remPC(12);
+					height: remPC(110);
+					position: absolute;
+					width: remPC(21);
+					top: remPC(-26);
+					right: remPC(32);
+				}
+			}
+		}
+	}
+
+	&__two-block {
+		@include mq(pc) {
+			margin: remPC(40);
+		}
+
+		@include mq(sp) {
+			margin: vw(40) 0;
+		}
+
+		&::after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+				
+		&__img {
+			@include mq(pc) {
+				width: 60%;
+				float: left;
+			}
+		}
+
+		&__text {
+			text-align: left;
+
+			@include mq(pc) {
+				font-size: remPC(16);
+				line-height: remPC(33);
+				width: 40%;
+				float: right;
+			}
+
+			@include mq(sp) {
+				margin: vw(20) 0 0;
+				font-size: vw(26);
+				line-height: vw(44);
+			}
+		}
+	}
+
+	&__under-text {
+		font-weight: 700;
+		text-align: left;
+
+		@include mq(pc) {
+			font-size: remPC(20);
+			line-height: remPC(32);
+		}
+
+		@include mq(sp) {
+			font-size: vw(28);
+			line-height: vw(48);
+		}
+
+		span {
+			color: #053d7e;
+		}
+	}
+
+	&__text {
+		font-size: remPC(26);
+		color:$color_blue1;
+		font-weight: 700;
+		margin: remPC(50) auto 0;
+
+		@include mq(sp) {
+			font-size: rem(17);
+			line-height: calc(26/17);
+			margin: vw(50) auto 0;
+		}
+	}
+	
+	.js-modal-close {
+		position: absolute;
+		right: remPC(30);
+		top: remPC(30);
+		width: remPC(27);
+		height: remPC(27);
+
+		@include mq(sp) {
+			right: rem(20);
+			top: rem(20);
+			width: rem(25);
+			height: rem(25);
+		}
+	}
+}
+
+/* モーダルウィンドウ表示中に記事本体を固定 */
+body.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}

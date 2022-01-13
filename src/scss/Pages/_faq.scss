@@ -1,0 +1,182 @@
+/* about us */
+
+.faq {
+	padding: remPC(80) 0;
+	.main-desc {
+		line-height: calc(36/16);
+		@include mq(sp) {
+			font-size: rem(16);
+			line-height: calc(25/16);
+		}
+	}
+	
+	&-anchor {
+		margin: remPC(57) 0 remPC(150);
+			@include mq(sp) {
+				margin: rem(25) 0 rem(88);
+			}
+		nav {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				li {
+					margin: 2% 0 0 0;
+					max-width: 32%;
+					width: 100%;
+					@include mq(sp) {
+						max-width: rem(248);
+						margin: rem(10) auto;
+					}
+					&:nth-child(3n-1){
+						margin:remPC(17) 2% 0;
+						@include mq(sp) {
+							margin: rem(10) auto;
+						}
+					}
+					a {
+						font-size: remPC(16);
+						@include mq(sp) {
+							font-size: rem(15);
+							line-height: rem(50);
+						}
+					}
+					&.main-button {
+						@include mq(sp) {
+							height: rem(50);
+						}
+						&::after {
+							transform: translateY(-50%) rotate(135deg);
+						}
+					}
+				}
+			}
+		}
+	}
+  
+	&-main {
+		
+		&__block {
+			margin:remPC(50) 0 remPC(160);
+			@include mq(sp) {
+				margin:0;
+			}
+			.main-title-jp {
+				padding-top: remPC(30);
+				@include mq(sp) {
+					padding-top: rem(30);
+				}
+				}
+			
+			.faq-block {
+				margin: 0 0 remPC(100) 0;
+				@include mq(sp) {
+					margin: 0 0 rem(50) 0;
+				}
+
+			.faq-ac {
+				background: #F7F7F7;
+				padding: remPC(40);
+				margin: remPC(40) 0;
+				@include mq(sp) {
+					padding: rem(20);
+					margin: rem(50) 0;
+				}
+				&__dt {
+					position: relative;
+					.faq-ac__title {
+						font-size: remPC(18);
+						color:$color_blue1;
+						position: relative;
+						padding: remPC(5) 0 0 0;
+						display: block;
+						width: 100%;
+						cursor: pointer;
+						@include mq(sp) {
+							font-size: rem(16);
+							width:90%;
+							line-height: calc(24/16);
+						}
+						&::after, &::before {
+							content:"";
+							position: absolute;
+							right: 1.25em;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 3px;
+							height: remPC(30);
+							background-color: $color_blue1;
+							transition: all 0.3s;
+							@include mq(sp) {
+								height: rem(15);
+								right: -6%;
+							}
+							}
+						&::after {
+							transform: translateY(-50%) rotate(90deg);
+							}
+						}
+					&::before {
+						content:"Q";
+						font-family: $montserrat;
+						color:$color_light_blue;
+						font-size: remPC(54);
+						position: absolute;
+						left:0;
+						top:remPC(-70);
+						font-weight: 600;
+						display: inline-block;
+						@include mq(sp) {
+							font-size: rem(40);
+							top:rem(-45);
+						}
+					}
+					&.selected {
+						h3 {
+							&::before {
+								transform: translateY(-50%) rotate(90deg);
+							}
+						}
+					}
+					}
+				&__dd {
+					padding: remPC(44) 0 0 0;
+					border-top: 1px solid $color_blue1;
+					margin: remPC(30) 0 0 0;
+					@include mq(sp) {
+						padding: rem(32) 0 0 0;
+						margin:rem(32) 0 0 0;
+					}
+					display: none;
+					p {
+						font-size: remPC(18);
+						line-height: calc(30/18);
+						position: relative;
+						@include mq(sp) {
+								font-size: rem(16);
+							line-height: calc(25/16);
+							}
+						&::before {
+							content:"A";
+							position: relative;
+							display:block;
+							font-size: remPC(35);
+							color:$color_blue1;
+							line-height: 1;
+							margin:0 0 remPC(10) 0;
+							font-family: $montserrat;
+							font-weight: 500;
+							@include mq(sp) {
+								font-size: rem(25);
+							}
+						}
+					}
+				}
+				}
+			}
+
+		}/* faq-main__block */
+	}
+
+	
+}

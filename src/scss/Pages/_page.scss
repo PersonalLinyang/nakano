@@ -1,0 +1,158 @@
+/* about us */
+
+.page {
+  &-header {
+    @include mq(pc) {
+      height: remPC(298);
+      background-image: url("../img/pc/aboutus/aboutus_header_bg.png");
+      background-size: remPC(918.87);
+      background-position: top remPC(-123.2) right remPC(-120.43);
+    }
+    
+    @include mq(sp) {
+      height: vw(300);
+      background-image: url("../img/sp/aboutus/aboutus_header_bg.png");
+      background-size: vw(1375.16);
+      background-position: right;
+    }
+	  h1 {
+		  span {
+			  display: block;
+			  &.en {
+				  font-family: $montserrat;
+				  font-weight: 300;
+				  letter-spacing: 0.1em;
+				  color: #295C9B;
+
+				  @include mq(pc) {
+					font-size: remPC(20);
+					line-height: remPC(24);
+				  }
+
+				  @include mq(sp) {
+					font-size: remPC(13);
+					line-height: remPC(16);
+				  }
+				}
+			  &.jp {
+				  font-weight: 600;
+				  color: #003D7E;
+
+				  @include mq(pc) {
+					margin-top: remPC(5);
+					font-size: remPC(36);
+					line-height: remPC(48);
+				  }
+
+				  @include mq(sp) {
+					margin-top: vw(3);
+					font-size: vw(40);
+					line-height: vw(54);
+				  }
+				}
+		  }
+	  }
+  }
+  
+	
+}
+
+.inner {
+	max-width: remPC(1000);
+	width: 100%;
+	margin: auto;
+	@include mq(sp) {
+		max-width: 100%;
+		padding: 0 rem(20);
+	}
+}
+
+.flex-column {
+	display: flex;
+	&.j-between {
+		justify-content: space-between;
+	}
+	&.j-center {
+		justify-content: center;
+	}
+	&.j-start {
+		justify-content: flex-start;
+	}
+	&.a-center {
+		align-items: center;
+	}
+}
+
+.btn {
+	&.btn-wh {
+		width: remPC(178);
+		height: remPC(48);
+		text-align: center;
+		a {
+			border: 1px solid $color_blue1;
+			border-radius: 24px;
+			background: #fff;
+			display: block;
+			position: relative;
+			font-size: remPC(15);
+			width: 100%;
+			line-height: remPC(48);
+			color: $color_blue1;
+			font-weight: 700;
+			&.external-link {
+				&::after {
+					content:"";
+					background: url("../../assets/img/pc/features/icon-external.svg") center / contain no-repeat;
+					position: absolute;
+					right: 15px;
+					top:50%;
+					transform: translateY(-50%);
+					width: remPC(16);
+					height: remPC(16);
+				}
+			}
+		}
+	}
+}
+
+.voice-list-header {
+	display: flex;
+	justify-content: space-between;
+
+	&-new-none {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.new-tag {
+	padding: remPC(5) remPC(10);
+	background-color: $color_red;
+	color: #fff;
+}
+
+.pagination-block {
+	padding: remPC(92) 0;
+	max-width: remPC(460);
+	margin: 0 auto;
+
+	ul {
+		display: flex;
+		justify-content: space-around;
+		font-size: remPC(16);
+	}
+
+	.prev img,
+	.next img {
+		width: 12px;
+	}
+
+	.current {
+		padding: 0 0 10px 0;
+		border-bottom: 1px solid $color_blue2;
+		color: $color_blue2;
+		width: remPC(22);
+		display: block;
+		text-align: center;
+	}
+}

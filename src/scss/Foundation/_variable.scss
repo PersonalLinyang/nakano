@@ -3,8 +3,8 @@ $main_color : #001489;
 $font_jp : 'Noto Sans JP', sans-serif;
 $font_jp_if : 'Noto Serif JP', sans-serif;
 $font_en : 'Helvetica Neue',Lato,sans-serif;
-$montserrat : 'Montserrat';
-$yugothic : "YuGothic";
+$montserrat : 'Montserrat', sans-serif;
+$yugothic : "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
 $color_text : #231815;
 $color_black : #000;
 $color_white : #fff;
@@ -25,3 +25,10 @@ $color_o_kaigo: #FF6E88;
 $color_o_bekka: #6697CC;
 
 $color_t_bekka: #224580;
+
+$color_red: #D12929;
+
+$color_blue1:#003D7E;
+$color_blue2:#295C9B;
+$color_blue3: #EBF6FE;
+$color_light_blue:#25A6DE;

@@ -9,7 +9,12 @@
   overflow: hidden;
   width: 100%;
   z-index: 999;
-  top: 0;
+
+  &.shadow {
+    @include mq(pc) {
+      box-shadow: 0 remPC(5) remPC(5) rgba(0, 0, 0, 0.1);
+    }
+  }
   
   &-left {
     float: left;
@@ -22,7 +27,7 @@
       }
       
       @include mq(sp) {
-        padding: vw(27) 0 0 vw(20);
+        padding: vw(27) 0 0 vw(40);
       }
     }
     &-img {
@@ -54,9 +59,13 @@
       }
       
       @include mq(sp) {
-        width: vw(116);
+        width: vw(172);
         height: vw(116);
         float: right;
+      }
+      
+      &:hover {
+        background: rgba(239, 131, 0, 0.7);
       }
     }
     
@@ -75,7 +84,7 @@
       @include mq(sp) {
         width: 100%;
         text-align: center;
-        padding-top: vw(45.19);
+        padding-top: vw(30);
       }
     }
     
@@ -98,6 +107,13 @@
         font-weight: 700;
         line-height: remPC(22);
         color: #FFF;
+      }
+
+      &-sp {
+        margin: vw(10) 0 0;
+        font-size: vw(24);
+        text-align: center;
+        color: #fff;
       }
     }
   }
@@ -189,13 +205,12 @@
       @include mq(pc) {
         left: remPC(212);
         right: remPC(280);
-        top: 0;
         height: remPC(82);
       }
       
       @include mq(sp) {
         width: 100%;
-        top: vw(116);
+        transform: translateY(vw(116));
         padding: vw(93) vw(110) vw(92);
         border-top: 1px solid #053D7E;
         border-bottom: 1px solid #053D7E;
@@ -217,6 +232,10 @@
     &-item {
       font-weight: 500;
       color: #003D7E;
+      
+      &:hover {
+        color: rgba(0, 61, 126, 0.7);
+      }
       
       &:first-child {
         @include mq(pc) {
@@ -267,6 +286,35 @@
         line-height: vw(38);
         position: relative;
       }
+
+      .full-link {
+
+        @include mq(sp) {
+          display: inline-block;
+          width: 100%;
+        }
+
+        &.current {
+          position: relative;
+        }
+  
+        &.current:after {
+          margin: 10px 0 0;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: #173e7e;
+
+          @include mq(pc) {
+            margin: 5px 0 0;
+          }
+
+          @include mq(sp) {
+            top: 25px;
+          }
+        }
+      }
     }
   }
 }
@@ -275,10 +323,11 @@
   position: fixed;
   z-index: 999;
   font-weight: 500;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   font-family: $montserrat;
   transform: rotate(90deg);
   cursor: pointer;
+  opacity: 0;
 
   @include mq(pc) {
     bottom: remPC(117.14);

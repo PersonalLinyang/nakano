@@ -1,0 +1,61 @@
+h2 {
+  background: #F2F2F3;
+}
+
+h3 {
+  color: #003D7E;
+  font-weight: 600;
+  border-left: 10px solid rgba(0,61,126,0.4);
+  padding-left: 10px;
+}
+
+mark {
+  background: #E6F3FF;
+}
+
+a {
+  color: #27A7DD;
+  text-decoration: none;
+}
+
+.has-background {
+  h2 {
+    border-bottom: 1px solid #707070;
+    background: transparent;
+    padding: 0 0 0.625rem;
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+  }
+  h4 {
+    border-bottom: 1px dotted #003D7E;
+  }
+}
+
+.with-arrow a {
+  &:after {
+    content: "";
+    width: 11.02px;
+    height: 11.02px;
+    border-top: 3px solid #27A7DD;
+    border-right: 3px solid #27A7DD;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
+
+.wp-block[data-align=left]>.wp-block-image {
+  text-align: left;
+  float: none;
+}
+
+.wp-block[data-align=right]>.wp-block-image {
+  text-align: right;
+  float: none;
+}
+
+html :where(.wp-block)[data-align=left], 
+html :where(.wp-block)[data-align=right] {
+  height: auto;
+  width: 100%;
+}

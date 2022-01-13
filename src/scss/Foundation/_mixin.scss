@@ -1,5 +1,6 @@
 //メディアクエリをmixin化
 $breakpoints: (
+    'msp': 'only screen and (max-width: 576px)',
     'sp': 'only screen and (max-width: 768px)',
     'max960': 'print,screen and (max-width: 960px)',
     'tb': 'print,screen and (max-width: 1280px)',
@@ -21,7 +22,7 @@ $breakpoints: (
 
 //可変vw
 @function vwPC($target_px){
-    @return $target_px / 1280 * 100vw;
+    @return $target_px / 1366 * 100vw;
 }
 
 @function vw($target_px){
